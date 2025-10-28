@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sahil Tripathi | Research Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8fafc;
+  text-align: justify;
+
+  /* Background image with neural network theme and subtle overlay */
+  background-image: 
+    linear-gradient(rgba(248, 250, 252, 0.85), rgba(248, 250, 252, 0.85)), 
+    url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+header {
+  /* Static background for header area */
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;
+  height: auto;
+}
+
+/* Animated gradient background (demo) */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* When you have your GIF URL, uncomment this and add your URL */
+/*
+header {
+  background-image: url("YOUR_ACTUAL_GIF_URL_HERE.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: none;
+}
+*/
+
+/* Box with animation background */
+.header-overlay {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 60px 40px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* When you have your GIF URL, use this instead */
+/*
+.header-overlay {
+  background-image: url("YOUR_ACTUAL_GIF_URL_HERE.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 40px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+*/
+
+header h1 {
+  font-size: 2.8em;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+
+    .container {
+      max-width: 950px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 0 auto;
+      padding: 40px 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: justify;
+    }
+    section { margin-bottom: 60px; }
+    section h2 {
+      color: #004d99;
+      border-bottom: 3px solid #004d99;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      font-size: 1.5em;
+      text-align: left;
+    }
+    
+    /* BIO SECTION */
+    #bio-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 35px;
+    }
+
+    #bio-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    #bio img { 
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #004d99;
+      display: block;
+    }
+    
+    /* Animated icons for profile */
+    .profile-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+      animation: bounce 2s infinite;
+      transition: transform 0.3s;
+    }
+    .profile-icon:hover {
+      animation: none;
+      transform: scale(1.3) rotate(15deg);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    .education-item { 
+      margin-bottom: 15px; 
+      position: relative;
+      padding-left: 20px;
+    }
+    .education-item::before {
+      content: "🎓";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .education-item h3 { margin:0; font-size: 1.1em; color: #003366; text-align: left; }
+    .education-item p { margin: 3px 0; font-size: 0.95em; text-align: justify; }
+    ul.pub-list { list-style: square; padding-left: 25px; }
+    ul.pub-list li { margin-bottom: 10px; line-height: 1.5; text-align: justify; }
+    .contact-icons { margin-top: 15px; text-align: left; }
+    .contact-icons a { 
+      display: inline-block; 
+      margin-right: 15px; 
+      transition: transform 0.3s;
+    }
+    .contact-icons a:hover {
+      transform: scale(1.3) rotate(5deg);
+    }
+    .contact-icons img { 
+      width: 32px; 
+      height: 32px; 
+      vertical-align: middle;
+      transition: filter 0.3s;
+    }
+    .contact-icons a:hover img {
+      filter: brightness(1.2);
+    }
+    .map-container { width: 100%; height: 450px; border-radius: 8px; overflow: hidden; position: relative; }
+    #visitorMap { width: 100%; height: 100%; border: 0; }
+    footer { 
+      text-align: center; 
+      padding: 25px; 
+      background: rgba(0, 51, 102, 0.9); 
+      color: #fff; 
+      font-size: 0.9em; 
+    }
+    a { color: #004d99; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    /* Animated section dividers */
+    section {
+      position: relative;
+    }
+    section::after {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #004d99, transparent);
+    }
+    
+    /* News animation */
+    #recent-news li {
+      position: relative;
+      padding-left: 25px;
+      transition: transform 0.3s, color 0.3s;
+    }
+    #recent-news li:hover {
+      transform: translateX(5px);
+      color: #004d99;
+    }
+    #recent-news li::before {
+      content: "✨";
+      position: absolute;
+      left: 0;
+    }
+    
+    /* Publication animation */
+    .pub-list li {
+      transition: transform 0.3s;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    .pub-list li:hover {
+      transform: translateX(5px);
+      background-color: rgba(0, 77, 153, 0.05);
+    }
+    
+    /* Award animation */
+    #honourable-award p {
+      position: relative;
+      padding: 15px;
+      border-radius: 8px;
+      background: linear-gradient(to right, rgba(0, 77, 153, 0.05), rgba(0, 77, 153, 0.1));
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    #honourable-award p:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 700px) {
+      .container { padding: 25px; }
+      #bio-wrapper { flex-direction: column; align-items: center; }
+      #bio img { margin-bottom: 20px; }
+      .floating-icon { font-size: 18px; }
+      header { min-height: 300px; padding: 60px 30px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-overlay">
+    <h1>Sahil Tripathi</h1>
+    <p>PhD Student | Jamia Hamdard | Visvesvaraya Fellow</p>
+  </div>
+</header>
+
+
+
+<div class="container">
+
+  <!-- BIO -->
+  <section id="bio">
+    <h2>Biography</h2>
+    <div id="bio-wrapper">
+      <div id="bio-left">
+        <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=K2lGoLkAAAAJ&citpid=1" alt="Sahil Tripathi Photo">
+        
+        <!-- Animated icons representing skills -->
+        
+      </div>
+      
+      <div id="bio-text">
+        <p>
+          Born and raised in India, <strong>Sahil Tripathi</strong> is currently a PhD student at <strong>Jamia Hamdard</strong>, where he is passionate about using cutting-edge technologies to solve real-world challenges. His research focuses on Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL), and Natural Language Processing (NLP). Sahil is particularly interested in exploring ways to align AI systems with human values to make them more explainable, robust, and socially beneficial. His work bridges his ongoing interests in ML applications and AI ethics, aiming to contribute to practical AI adoption in critical fields.
+        </p>
+        <p>
+          Sahil has always demonstrated a strong inclination toward learning and self-improvement. His problem-solving mindset and creative approach drive him to seek innovative solutions to complex challenges, particularly in AI and optimization. He earned his Bachelor's degree in Computer Applications (BCA) and Master's degree in Computer Applications (MCA) from Jamia Hamdard, where he was committed to academic excellence. His skills include Python, Machine Learning, Deep Learning, Natural Language Processing, Data Structures & Algorithms, SQL, Core Java, DBMS, OOPs, and Problem Solving. With a passion for research, Sahil's academic journey continues to reflect his dedication to advancing AI and its practical applications.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Educations</h2>
+    
+    <div class="education-item">
+      <h3>PhD in Computer Science</h3>
+      <p><strong>Jamia Hamdard</strong> | 2024 – Present</p>
+      <p>Research focused on Large Language Models (LLMs), Natural Language Processing, and Artificial Intelligence.</p>
+    </div>
+    
+    <div class="education-item">
+      <h3>Master in Computer Application (MCA)</h3>
+      <p><strong>Jamia Hamdard</strong> | 2021 – 2023</p>
+      <p>GPA: 7.8 / 10.0</p>
+      <p><strong>Major Project:</strong> <em>Multi-Disease Detection Web Application</em> — Developed a deep learning–based web app capable of predicting multiple diseases (e.g., pneumonia, diabetes, and malaria) from medical data and images using CNN and ensemble learning models. Integrated Flask backend with an interactive user dashboard for patient report visualization.</p>
+    </div>
+    
+    <div class="education-item">
+      <h3>Bachelor in Computer Application (BCA)</h3>
+      <p><strong>Jamia Hamdard</strong> | 2018 – 2021</p>
+      <p>GPA: 8.0 / 10.0</p>
+      <p><strong>Major Project:</strong> <em>Smart Campus Management System</em> — Designed and implemented a full-stack web application to automate student attendance, timetable scheduling, and result management using PHP, MySQL, and JavaScript. Improved administrative efficiency and reduced manual errors in academic record handling.</p>
+    </div>
+  </section>
+
+  <!-- HONORABLE AWARDS -->
+  <section id="honourable-award">
+    <h2>Honorable Awards</h2>
+    <p>
+      Visvesvaraya PhD Fellowship (2024 – Present)<br>
+      Awarded by <strong>MeitY, Government of India</strong>, under the Visvesvaraya PhD Scheme for Electronics and IT, in recognition of academic excellence and research potential in the fields of Artificial Intelligence (AI), Machine Learning (ML), Natural Language Processing (NLP), and Large Language Models (LLMs).
+    </p>
+  </section>
+  
+  <!-- PROFESSIONAL MEMBERSHIPS -->
+  <section id="memberships">
+    <h2>Professional Memberships</h2>
+    <ul>
+      <li>IEEE – Graduate Student Member</li>
+      <!-- You can add more memberships here if applicable -->
+    </ul>
+  </section>
+
+  <!-- RECENT NEWS -->
+  <section id="recent-news">
+    <h2>Recent News</h2>
+    <ul>
+      <li><strong>October 2025</strong> – Accepted at <strong>WISE 2025</strong> (Core Rank B) <em>--MAGIC-Enhanced Keyword Prompting for Zero-Shot Audio Captioning with CLIP Models</em>.</li>
+      
+      <li><strong>September 2025</strong> – Published <em>--A CNN-Based Framework for Geometric Alignment of Historical and Satellite Imagery</em> in <strong>IEEE Access</strong> (SCI-Indexed, IF = 3.6).</li>
+      
+      <li><strong>August 2025</strong> – Published <em>--Multimodal Fine-Tuning of LLMs for Robust Document Visual Question Answering</em> in <strong>IEEE Access</strong> (SCI-Indexed, IF = 3.6).</li>
+      
+      <li><strong>July 2025</strong> – Accepted at <strong>ASONAM 2025</strong> (Core Rank B) <em>--Can We Predict Your Next Move Without Breaking Your Privacy?</em><strong></strong>.</li>
+      
+      <li><strong>July 2024</strong> – Received <strong>Visvesvaraya PhD Fellowship</strong> from MeitY, Government of India.</li>
+    </ul>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Full list available on <a href="https://scholar.google.com/citations?user=K2lGoLkAAAAJ&hl=en" target="_blank">Google Scholar</a>.</p>
+    <ul class="pub-list">
+    
+      <li><strong>Sahil Tripathi</strong>, Md Tabrez Nafis, Imran Hussain, Abdul Khader Jilani Saudagar, 
+        "<em>Multimodal Fine-Tuning of LLMs for Robust Document Visual Question Answering</em>," 
+        <strong>IEEE Access</strong>, 2025. DOI: 
+        <a href="https://doi.org/10.1109/ACCESS.2025.3615201" target="_blank">10.1109/ACCESS.2025.3615201</a>
+      </li>
+      
+      <li>Arpita Soni, <strong>Sahil Tripathi</strong>, Gautam Siddharth Kashyap, Manaswi Kulahara, 
+        Mohammad Anas Azeez, Zohaib Hasan Siddiqui, Nipun Joshi, Jiechao Gao, 
+        "<em>Can We Predict Your Next Move Without Breaking Your Privacy?</em>," 
+        <strong>arXiv preprint arXiv:2507.08843</strong>, 2025.
+      </li>
+      
+      <li>Manaswi Kulahara, Abdul Khader Jilani Saudagar, <strong>Sahil Tripathi</strong>, Md Azizul Hoque, 
+        "<em>A CNN-Based Framework for Geometric Alignment of Historical and Satellite Imagery</em>," 
+        <strong>IEEE Access</strong>, 2025.
+      </li>
+      
+      <li>Vijay Govindarajan, Pratik Patel, <strong>Sahil Tripathi</strong>, Md Azizul Hoque, Gautam Siddharth Kashyap, 
+        "<em>MAGIC-Enhanced Keyword Prompting for Zero-Shot Audio Captioning with CLIP Models</em>," 
+        <strong>arXiv preprint arXiv:2509.12591</strong>, 2025.
+      </li>
+      
+      <li><strong>Sahil Tripathi</strong>, Md Tabrez Nafis, Imran Hussain, Jiechao Gao, 
+        "<em>The Confidence Paradox: Can LLM Know When It's Wrong</em>," 
+        <strong>arXiv preprint arXiv:2506.23464</strong>, 2025.
+      </li>
+    
+    </ul>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>
+      I teach <strong>SQL Lab (BCA 305) </strong> and <strong>Java Lab (BTech 508)</strong> to <strong></strong>  <strong></strong> students at <strong>Jamia Hamdard</strong>, guiding them on practical programming and database skills.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      📧 <strong>Email:</strong> <a href="mailto:sahikrtr@gmail.com">sahikrtr@gmail.com</a><br>
+      📍 <strong>Address:</strong> Department of Computer Science, Jamia Hamdard, New Delhi, India
+    </p>
+    <div class="contact-icons">
+      <a href="https://orcid.org/0009-0009-4739-7117" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID"></a>
+      <a href="https://scholar.google.com/citations?user=K2lGoLkAAAAJ&hl=en" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar"></a>
+      <a href="https://www.linkedin.com/in/sahil-tripathi-894a4921b/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+      <a href="https://github.com/sahilkrtr" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"></a>
+    </div>
+  </section>
+
+  <!-- VISITOR MAP -->
+  <section id="map">
+    <h2>Visitor Map</h2>
+    <p>This map shows the approximate location of people viewing this profile.</p>
+    <div id="visitorMap" class="map-container"></div>
+  </section>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize map with default center (India)
+    var map = L.map('visitorMap').setView([20.5937, 78.9629], 4);
+
+    // OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    fetch('https://ipwho.is/')
+    .then(res => res.json())
+    .then(data => {
+      const lat = data.latitude;
+      const lon = data.longitude;
+      L.marker([lat, lon]).addTo(map)
+        .bindPopup(`You are here: ${data.city}, ${data.country}`)
+        .openPopup();
+      map.setView([lat, lon], 6);
+    })
+    .catch(err => console.log(err));
+  </script>
+
+  <style>
+    /* Map container style */
+    #visitorMap {
+      width: 100%;
+      height: 450px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+
+</div>
+
+<footer>
+  © 2025 Sahil Tripathi | All Rights Reserved
+</footer>
+
+</body>
+</html>
